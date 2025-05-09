@@ -66,7 +66,7 @@ export class OtpService {
           .updateOne({ email: email }, { $set: { verified: false } })
           .exec();
         console.log('Executed', expired, verified, email);
-      }, 4000);
+      }, 60000 * 2);
     }
 
     console.log(otp);
